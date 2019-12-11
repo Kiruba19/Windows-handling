@@ -1,0 +1,10 @@
+import org.base.resources.Base;
+
+public class ExcelIntegration extends Base {
+	public static void main(String[] args) {
+		
+		launch();
+		
+	}
+
+}

@@ -1,0 +1,10 @@
+package org.resources;
+
+public class JunitTest {
+	@BeforeClass
+	public static void before()
+	{
+		
+	}
+
+}

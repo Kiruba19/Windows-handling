@@ -1,0 +1,35 @@
+package org.base.resources;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Base {
+	static WebDriver driver;
+
+	public static void launch() {
+
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\user\\eclipse-workspace\\Kiruba\\MavenTest\\driver\\chromedriver.exe");
+		driver = new ChromeDriver();
+
+	}
+	
+	public static void getUrl(String url) {
+	driver.get(url);
+}
+	public static void getCurrentUrl() {
+		driver.getCurrentUrl();
+
+	}
+	public static void type(WebElement ele, String value) {
+		ele.sendKeys(value);;
+		
+
+	}
+	public static void click() {
+		
+
+	}
+	
+}

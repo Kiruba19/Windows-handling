@@ -1,0 +1,13 @@
+import java.io.File;
+
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+public class ExcelWrite {
+	public static void main(String[] args) {
+		
+		File f = new File("C:\\Users\\user\\eclipse-workspace\\Kiruba\\MavenTest\\TestData\\Sample1.xlsx");
+		WorkBook w = new XSSFWorkbook();
+		
+	}
+
+}

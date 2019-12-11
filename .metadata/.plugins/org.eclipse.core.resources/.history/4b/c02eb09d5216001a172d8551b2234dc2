@@ -1,0 +1,23 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Q3 {
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\user\\eclipse-workspace\\Kiruba\\DropDown\\driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.snapdeal.com/");
+		WebElement search = driver.findElement(By.id("inputValEnter"));
+		search.sendKeys("iphone7", Keys.ENTER);
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("(//p[text()='Apple iPhone 7 ( 32GB , 2 GB ) Black'])[1]")).click();
+		
+		
+
+	}
+
+}

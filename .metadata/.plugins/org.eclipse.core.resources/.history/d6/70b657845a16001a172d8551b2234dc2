@@ -1,0 +1,35 @@
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Q2 {
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\user\\eclipse-workspace\\Kiruba\\DropDown\\driver\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://www.amazon.in/");
+		WebElement search = driver.findElement(By.id("twotabsearchtextbox"));
+		search.sendKeys("iphone x", Keys.ENTER);
+		Thread.sleep(5000);
+		driver.findElement(By.xpath("(//span[text()='Apple iPhone Xs (64GB) - Gold'])[1]")).click();
+		String parentw = driver.getWindowHandle();
+		System.out.println(parentw);
+		Set<String> allwindow = driver.getWindowHandles();
+		System.out.println(allwindow);
+		for (String childwindow : allwindow) {
+			
+			if(!parentw.equals(childwindow)) {
+				driver.switchTo().window(childwindow);
+				System.out.println("switched to child window");
+			}
+		}
+		driver.findElement(By.id("add-to-cart-button")).click();
+		driver.findElement(By.id(hlb-ptc-btn-native)")).click();
+	}
+
+}

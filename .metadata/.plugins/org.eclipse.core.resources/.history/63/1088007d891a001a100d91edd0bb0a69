@@ -1,0 +1,13 @@
+import org.base.resources.Base;
+import org.openqa.selenium.By;
+
+public class ExcelIntegration extends Base {
+	public static void main(String[] args) {
+		
+		launch();
+		getUrl("https://www.facebook.com/");
+		getCurrentUrl();
+		type(driver.findElement(By.id("email")), getData(4, 1));
+	}
+
+}

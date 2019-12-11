@@ -1,0 +1,12 @@
+package org.resources;
+
+import org.junit.BeforeClass;
+
+public class JunitTest {
+	@BeforeClass
+	public static void before()
+	{
+		System.out.println("beforeclass");
+	}
+
+}

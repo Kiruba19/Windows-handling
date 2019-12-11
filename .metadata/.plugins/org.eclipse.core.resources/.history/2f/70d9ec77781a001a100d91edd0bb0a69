@@ -1,0 +1,12 @@
+package org.base.resources;
+
+import org.openqa.selenium.WebDriver;
+
+public class Base {
+	static WebDriver driver;
+	public static void launch() {
+		
+
+	}
+
+}
